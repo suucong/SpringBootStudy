@@ -1,16 +1,19 @@
 package spring.practice.service;
 
+import org.springframework.stereotype.Service;
 import spring.practice.domain.Member;
 import spring.practice.repository.MemberRepository;
 
 import java.util.List;
 import java.util.Optional;
 
+ @Service
 public class MemberService {
 
     private final MemberRepository memberRepository;
 
-    public MemberService(MemberRepository memberRepository) {   // 의존성 주입. 내가 직접 객체 생성 x -> Dependency Injection(DI)
+    // 의존성 주입. 외부에서 객체를 주입받음. -> Dependency Injection(DI)
+    public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
 
