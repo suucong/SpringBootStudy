@@ -1,13 +1,14 @@
 package spring.practice.service;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import spring.practice.domain.Member;
 import spring.practice.repository.MemberRepository;
 
 import java.util.List;
 import java.util.Optional;
 
- @Service
+@Transactional
 public class MemberService {
 
     private final MemberRepository memberRepository;
